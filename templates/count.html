@@ -1,0 +1,14 @@
+<h1>Your Text is {{ count }} word long!</h1>
+
+<form action="{% url 'home' %}">
+  <input type="submit" value="Start Again" />
+</form>
+<a href="{% url 'home' %}">Start Again</a>
+
+<h1>Your Text</h1>
+{{ fulltext }}
+
+<h1>Word Count</h1>
+{% for word, counttotal in sortedwords %} {{ word }} - {{ counttotal }}
+<br />
+{% endfor %}
